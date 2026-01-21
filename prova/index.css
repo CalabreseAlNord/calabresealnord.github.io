@@ -89,6 +89,7 @@
   grid-auto-columns: calc(33.3333% - 56px);
   grid-template-columns: repeat(3, calc(33.3333% - 56px));
   --gap: 84px;
+  min-height: 406px;
 }
 
 .u-section-2 .u-list-item-1 {
@@ -257,6 +258,10 @@
   .u-section-2 .u-list-1 {
     width: 1140px;
   }
+
+  .u-section-2 .u-repeater-1 {
+    min-height: 381px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -267,6 +272,7 @@
   .u-section-2 .u-repeater-1 {
     grid-auto-columns: calc(33.333333333333336% - 56px);
     grid-template-columns: repeat(3, calc(33.333333333333336% - 56px));
+    min-height: 314px;
   }
 }
 

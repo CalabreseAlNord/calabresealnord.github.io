@@ -47166,7 +47166,7 @@ a.u-link.u-text-hover-color-var:hover {
   .u-header .u-text-1 {
     width: auto;
     margin-top: -32px;
-    margin-bottom: 22px;
+    margin-bottom: 37px;
     margin-left: 14px;
   }
 }
@@ -47281,7 +47281,7 @@ a.u-link.u-text-hover-color-var:hover {
 
 @media (max-width: 991px) {
    .u-footer {
-    min-height: 479px;
+    min-height: 478px;
   }
 
   .u-footer .u-line-1 {
