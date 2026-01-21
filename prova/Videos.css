@@ -111,36 +111,38 @@
 
 @media (max-width: 991px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 762px;
+    min-height: 705px;
   }
 
   .u-section-1 .u-gallery-1 {
     height: 647px;
-    margin-top: 38px;
     width: 720px;
+    margin-top: 38px;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 767px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 584px;
+    min-height: 562px;
   }
 
   .u-section-1 .u-gallery-1 {
     height: 487px;
     width: 540px;
-    margin-bottom: 59px;
+    margin-bottom: 38px;
   }
 }
 
 @media (max-width: 575px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 1313px;
+    min-height: 1275px;
   }
 
   .u-section-1 .u-gallery-1 {
     height: 1208px;
     width: 340px;
+    margin-bottom: 29px;
   }
 
   .u-section-1 .u-gallery-inner-1 {
