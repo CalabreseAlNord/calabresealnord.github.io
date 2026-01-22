@@ -1,12 +1,11 @@
 .u-section-1 .u-sheet-1 {
-  min-height: 4537px;
+  min-height: 4629px;
   margin-bottom: 0;
 }
 
 .u-section-1 .u-gallery-1 {
   height: 4429px;
-  margin-top: 69px;
-  margin-bottom: 39px;
+  margin: 161px 0 39px;
 }
 
 .u-section-1 .u-gallery-inner-1 {
@@ -303,51 +302,6 @@
   padding: 20px;
 }
 
-.u-section-1 .u-gallery-item-22 {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 0;
-}
-
-.u-section-1 .u-back-image-22 {
-  object-position: 50% 34.88%;
-}
-
-.u-section-1 .u-over-slide-22 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
-  padding: 20px;
-}
-
-.u-section-1 .u-gallery-item-23 {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 0;
-}
-
-.u-section-1 .u-back-image-23 {
-  object-position: 50% 34.88%;
-}
-
-.u-section-1 .u-over-slide-23 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
-  padding: 20px;
-}
-
-.u-section-1 .u-gallery-item-24 {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 0;
-}
-
-.u-section-1 .u-back-image-24 {
-  object-position: 50% 34.88%;
-}
-
-.u-section-1 .u-over-slide-24 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
-  padding: 20px;
-}
-
 @media (max-width: 1399px) {
   .u-section-1 .u-sheet-1 {
     min-height: 3913px;
@@ -356,6 +310,8 @@
   .u-section-1 .u-gallery-1 {
     margin-top: 49px;
     height: 3825px;
+    margin-right: initial;
+    margin-left: initial;
   }
 }
 
@@ -368,6 +324,8 @@
     margin-top: 57px;
     margin-bottom: 34px;
     height: 3154px;
+    margin-right: initial;
+    margin-left: initial;
   }
 
   .u-section-1 .u-gallery-inner-1 {
@@ -383,7 +341,9 @@
   .u-section-1 .u-gallery-1 {
     margin-top: 40px;
     margin-bottom: 40px;
-    height: 5436px;
+    height: 5694px;
+    margin-right: initial;
+    margin-left: initial;
   }
 
   .u-section-1 .u-gallery-inner-1 {
@@ -397,7 +357,9 @@
   }
 
   .u-section-1 .u-gallery-1 {
-    height: 16308px;
+    height: 16306px;
+    margin-right: initial;
+    margin-left: initial;
   }
 
   .u-section-1 .u-gallery-inner-1 {
@@ -413,6 +375,8 @@
   .u-section-1 .u-gallery-1 {
     margin-top: 41px;
     margin-bottom: 41px;
-    height: 10268px;
+    height: 10267px;
+    margin-right: initial;
+    margin-left: initial;
   }
 }
