@@ -1,8 +1,8 @@
  .u-section-1 {
   filter: none;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/foto1.jpg');
-  background-position: 50% 32.8%;
-  background-size: cover;
+  background-position: 50% 32.8%, 50% 32.8%;
+  background-size: cover, cover;
 }
 
 .u-section-1 .u-sheet-1 {
@@ -13,7 +13,7 @@
   font-family: Syne;
   font-size: 0.875rem;
   font-weight: 400;
-  margin: 756px 105px 49px;
+  margin: 760px 105px 45px;
 }
 
 @media (max-width: 1399px) {
@@ -22,9 +22,8 @@
   }
 
   .u-section-1 .u-text-1 {
-    margin-top: 60px;
-    margin-left: 15px;
-    margin-right: 15px;
+    width: auto;
+    margin: 666px 15px 39px;
   }
 }
 
@@ -34,8 +33,15 @@
   }
 
   .u-section-1 .u-text-1 {
-    margin-left: 0;
-    margin-right: 0;
+    font-size: 0.75rem;
+    margin: 691px 0 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-text-1 {
+    margin-top: 677px;
+    margin-bottom: 35px;
   }
 }
 
@@ -43,15 +49,22 @@
   .u-section-1 .u-sheet-1 {
     min-height: 338px;
   }
+
+  .u-section-1 .u-text-1 {
+    font-size: 0.625rem;
+    margin-top: 276px;
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 575px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 489px;
+    min-height: 499px;
   }
 
   .u-section-1 .u-text-1 {
-    font-size: 0.75rem;
+    margin-top: 401px;
+    margin-bottom: 50px;
   }
 }.u-section-2 .u-sheet-1 {
   min-height: 665px;
@@ -622,14 +635,14 @@
 .u-section-3 .u-btn-1 {
   border-style: solid !important;
 } .u-section-4 {
-  min-height: 398px;
+  min-height: 413px;
 }
 
 .u-section-4 .u-text-1 {
   font-family: Syne;
   font-weight: 700;
   font-size: 3.75rem;
-  margin: 85px auto 0;
+  margin: 60px auto 0;
 }
 
 .u-section-4 .u-custom-html-1 {
@@ -664,9 +677,13 @@
 }
 
 @media (max-width: 767px) {
+   .u-section-4 {
+    min-height: 446px;
+  }
+
   .u-section-4 .u-text-1 {
     width: auto;
-    margin-top: 54px;
+    margin-top: 55px;
     margin-left: 50px;
     margin-right: 50px;
   }
@@ -677,18 +694,18 @@
 }
 
 @media (max-width: 575px) {
+   .u-section-4 {
+    min-height: 440px;
+  }
+
   .u-section-4 .u-text-1 {
-    margin-top: 53px;
+    font-size: 2.34375rem;
+    margin-top: 51px;
     margin-left: 0;
     margin-right: 0;
-    font-size: 2.34375rem;
   }
 
   .u-section-4 .u-custom-html-1 {
     margin-top: 39px;
-    margin-bottom: 53px;
   }
-} /* menu scuro dopo scroll */
-.u-header.scrolled .u-nav-link {
-  color: black !important;
-} 
+}
