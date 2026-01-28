@@ -47206,6 +47206,11 @@ a.u-link.u-text-hover-color-var:hover {
     margin-top: 12px;
   }
 
+  .u-header .u-nav-2 {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .u-header .u-text-1 {
     margin-bottom: 16px;
   }
