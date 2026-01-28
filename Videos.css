@@ -386,7 +386,7 @@
 
 @media (max-width: 575px) {
   .u-section-2 .u-sheet-1 {
-    min-height: 2391px;
+    min-height: 2453px;
   }
 
   .u-section-2 .u-text-1 {
@@ -399,18 +399,18 @@
   }
 
   .u-section-2 .u-video-1 {
-    min-height: 538px;
+    min-height: 550px;
   }
 
   .u-section-2 .u-video-2 {
-    min-height: 538px;
+    min-height: 550px;
   }
 
   .u-section-2 .u-video-3 {
-    min-height: 538px;
+    min-height: 550px;
   }
 
   .u-section-2 .u-video-4 {
-    min-height: 634px;
+    min-height: 649px;
   }
 }
