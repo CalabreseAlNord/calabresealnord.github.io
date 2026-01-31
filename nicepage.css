@@ -47134,7 +47134,8 @@ a.u-link.u-text-hover-color-var:hover {
 .u-header .u-text-1 {
   font-family: Syne;
   font-weight: 700;
-  margin: -31px auto 37px 0;
+  font-size: 1.125rem;
+  margin: -31px auto 38px -2px;
 }
 @media (max-width: 1399px) {
   .u-header .u-menu-1 {
@@ -47146,6 +47147,7 @@ a.u-link.u-text-hover-color-var:hover {
   .u-header .u-text-1 {
     width: auto;
     margin-top: -31px;
+    margin-left: -2px;
   }
 }
 @media (max-width: 1199px) {
