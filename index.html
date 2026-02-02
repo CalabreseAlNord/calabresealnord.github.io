@@ -7,7 +7,12 @@
     <title>Aurora Merenda</title>
 <script>
     function gdprConfirmed() {
-        return true;
+        return document.cookie.split(';').filter(function(item) {
+            var val = item.trim().split('=');
+            val = decodeURIComponent(val[1] || '');
+            try { val = JSON.parse(val); } catch (e) { val = {}; }
+            return val && val.analytics;
+        }).length;
     }
     if (gdprConfirmed()) {
     document.write("\
@@ -30,6 +35,8 @@
     <meta property="og:description" content="Sito Web &amp; Portfolio">
     <meta property="og:image" content="https://merendaurora.com/images/08A63CAD-A5B5-4BF6-AB5E-937F69E167D8.jpg">
     <meta property="og:url" content="https://merendaurora.com">
+    <link rel="icon" href="images/favicon.jpg">
+    
     
     
     
@@ -53,7 +60,7 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="/">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body data-home-page="https://merendaurora-2.nicepage.io/Home.html?version=337ccd0d-c1da-4ef9-ee29-114824d20130" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-clearfix u-overlap u-overlap-contrast u-overlap-transparent u-xxl-mode" data-lang="it"><!-- Google Tag Manager (noscript) -->
+  <body data-home-page="https://merendaurora-2.nicepage.io/Home.html?version=14d67c21-c509-5e72-d06e-f268c04ccde1" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-clearfix u-overlap u-overlap-contrast u-overlap-transparent u-xxl-mode" data-lang="it"><!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55VBKSZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) --><header class="u-clearfix u-header u-sticky u-sticky-354b u-header" id="sec-c3b1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-one-level u-menu-open-right u-offcanvas u-menu-1" role="navigation" data-responsive-from="SM">
@@ -284,6 +291,88 @@ PROCEDIMENTO PER METTERE NUOVI LOGHI
         </div>
       </div>
     </section>
+    <section class="u-align-center u-clearfix u-container-align-center u-container-align-center-lg u-container-align-center-md u-container-align-center-sm u-container-align-center-xl u-container-align-center-xxl u-white u-section-5" id="block-7">
+      <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-sheet-1">
+        <h2 class="u-custom-font u-text u-text-black u-text-default u-text-1">Testimonianze</h2>
+        <div class="u-expanded-width u-layout-horizontal u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-icon u-icon-circle u-text-grey-5 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xlink:href="#svg-91e6"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-91e6"><path d="m233.882 29.235v175.412h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412z"></path><path d="m0 204.647h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412h-175.412z"></path></svg></span>
+                <p class="u-custom-font u-text u-text-grey-40 u-text-2">Super professionale Auri, riesce a metterti subito a proprio agio. Simpatica, dolce e molto veloce con le consegne.&nbsp;</p>
+                <div alt="" class="u-image u-image-circle u-image-1" data-image-width="1600" data-image-height="1600"></div>
+                <h6 class="u-custom-font u-text u-text-default u-text-3">BEATJUNKIE</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-icon u-icon-circle u-text-grey-5 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xlink:href="#svg-91e6"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-91e6"><path d="m233.882 29.235v175.412h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412z"></path><path d="m0 204.647h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412h-175.412z"></path></svg></span>
+                <p class="u-custom-font u-text u-text-grey-40 u-text-4">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <div alt="" class="u-image u-image-circle u-image-2" data-image-width="1000" data-image-height="1500"></div>
+                <h6 class="u-custom-font u-text u-text-default u-text-5">IL CICLONE HAIR LAB</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-icon u-icon-circle u-text-grey-5 u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xlink:href="#svg-91e6"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-91e6"><path d="m233.882 29.235v175.412h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412z"></path><path d="m0 204.647h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412h-175.412z"></path></svg></span>
+                <p class="u-custom-font u-text u-text-grey-40 u-text-6"> Lavorare con Aurora è un piacere.<br>È solare, bella e con due occhi che ispirano positività. 
+                </p>
+                <div alt="" class="u-image u-image-circle u-image-3" data-image-width="1000" data-image-height="1500"></div>
+                <h6 class="u-custom-font u-text u-text-default u-text-7">FUÈ</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-4"><span class="u-icon u-icon-circle u-text-grey-5 u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xlink:href="#svg-91e6"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-91e6"><path d="m233.882 29.235v175.412h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412z"></path><path d="m0 204.647h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412h-175.412z"></path></svg></span>
+                <p class="u-custom-font u-text u-text-grey-40 u-text-8">Già si intravedeva in nuce la futura foto artista. Sono felicissimo dei tuoi progressi.&nbsp;Resto onorato.</p>
+                <div alt="" class="u-image u-image-circle u-image-4" data-image-width="1512" data-image-height="2016"></div>
+                <h6 class="u-custom-font u-text u-text-default u-text-9">LEONARDO AGGAZIO</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-5"><span class="u-icon u-icon-circle u-text-palette-3-base u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xlink:href="#svg-91e6"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-91e6"><path d="m233.882 29.235v175.412h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412z"></path><path d="m0 204.647h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412h-175.412z"></path></svg></span>
+                <p class="u-custom-font u-text u-text-grey-40 u-text-10">bb</p>
+                <div alt="" class="u-image u-image-circle u-image-5" data-image-width="2730" data-image-height="4096"></div>
+                <h6 class="u-custom-font u-text u-text-default u-text-11"> MR.FRITTATINA</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-6"><span class="u-icon u-icon-circle u-text-palette-3-base u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xlink:href="#svg-91e6"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-91e6"><path d="m233.882 29.235v175.412h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412z"></path><path d="m0 204.647h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412h-175.412z"></path></svg></span>
+                <p class="u-custom-font u-text u-text-grey-40 u-text-12"> Rora grazie mille di cuore. Foto super professionali, e grande disponibilità, sei riuscita a farci &nbsp;godere questa bellissima esperienza.</p>
+                <div alt="" class="u-image u-image-circle u-image-6" data-image-width="1000" data-image-height="1500"></div>
+                <h6 class="u-custom-font u-text u-text-default u-text-13">Nick Cave</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-7"><span class="u-icon u-icon-circle u-text-palette-3-base u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xlink:href="#svg-91e6"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-91e6"><path d="m233.882 29.235v175.412h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412z"></path><path d="m0 204.647h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412h-175.412z"></path></svg></span>
+                <p class="u-custom-font u-text u-text-grey-40 u-text-14">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <div alt="" class="u-image u-image-circle u-image-7" data-image-width="1000" data-image-height="1500"></div>
+                <h6 class="u-custom-font u-text u-text-default u-text-15">Nick Cave</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-8"><span class="u-icon u-icon-circle u-text-palette-3-base u-icon-8"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xlink:href="#svg-91e6"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-91e6"><path d="m233.882 29.235v175.412h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412z"></path><path d="m0 204.647h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412h-175.412z"></path></svg></span>
+                <p class="u-custom-font u-text u-text-grey-40 u-text-16">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                <div alt="" class="u-image u-image-circle u-image-8" data-image-width="1000" data-image-height="1500"></div>
+                <h6 class="u-custom-font u-text u-text-default u-text-17">Nick Cave</h6>
+              </div>
+            </div>
+          </div>
+          <a class="u-absolute-vcenter-lg u-absolute-vcenter-md u-absolute-vcenter-sm u-absolute-vcenter-xl u-absolute-vcenter-xxl u-gallery-nav u-gallery-nav-prev u-gradient u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-grey-5 u-gallery-nav-1" href="#" role="button"><span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg></span><span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg></span>
+          </a>
+          <a class="u-absolute-vcenter-lg u-absolute-vcenter-md u-absolute-vcenter-sm u-absolute-vcenter-xl u-absolute-vcenter-xxl u-gallery-nav u-gallery-nav-next u-gradient u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-grey-5 u-gallery-nav-2" href="#" role="button"><span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg></span><span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
     <style class="u-overlap-style">.u-overlap:not(.u-sticky-scroll) .u-header {
 background-color: var(--color-var) !important; --color-var: #ffffff00 !important
 }</style>
@@ -315,6 +404,153 @@ background-color: var(--color-var) !important; --color-var: #ffffff00 !important
         <p class="u-align-left u-custom-font u-text u-text-7">base a Reggio Emilia (RE)&nbsp;e Milano (MI), Italia attiva per trasferte&nbsp;</p><span class="u-file-icon u-icon u-icon-2" data-href="https://www.instagram.com/roradirector" title="Instragram"><img src="images/1384031.png" alt=""></span>
         <div class="u-absolute-hcenter u-border-1 u-border-grey-dark-1 u-line u-line-vertical u-line-2"></div>
       </div><div class="u-border-1 u-border-black u-line u-line-horizontal u-line-3"></div><p class="u-align-right u-custom-font u-text u-text-8">copyright&nbsp;<b>© 2026 Aurora Merenda</b>
-      </p></footer>
+      </p></footer><section class="u-align-center u-clearfix u-container-align-center u-cookies-consent u-white u-cookies-consent" id="sec-73d4">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-left-cell u-size-43-md u-size-43-sm u-size-43-xs u-size-46-lg u-size-46-xl u-size-46-xxl u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <h3 class="u-text u-text-default u-text-palette-1-base u-text-1">Cookies &amp; Privacy</h3>
+                  <p class="u-text u-text-default u-text-palette-1-base u-text-2">This website uses cookies to ensure you get the best experience on our website.</p>
+                </div>
+              </div>
+              <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-right-cell u-size-14-lg u-size-14-xl u-size-14-xxl u-size-17-md u-size-17-sm u-size-17-xs u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-top-sm u-valign-top-xs u-container-layout-2">
+                  <a href="#" class="u-btn u-btn-round u-button-style u-palette-1-base u-radius-23 u-text-body-alt-color u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Confirm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <style> .u-cookies-consent {
+  background-image: none;
+}
+
+.u-cookies-consent .u-sheet-1 {
+  min-height: 212px;
+}
+
+.u-cookies-consent .u-layout-wrap-1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.u-cookies-consent .u-layout-cell-1 {
+  min-height: 152px;
+}
+
+.u-cookies-consent .u-container-layout-1 {
+  padding: 30px 60px;
+}
+
+.u-cookies-consent .u-text-1 {
+  margin-top: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.u-cookies-consent .u-text-2 {
+  margin: 8px 20px 0 0;
+}
+
+.u-cookies-consent .u-layout-cell-2 {
+  min-height: 152px;
+}
+
+.u-cookies-consent .u-container-layout-2 {
+  padding: 30px;
+}
+
+.u-cookies-consent .u-btn-1 {
+  font-weight: 600;
+  letter-spacing: 3px;
+  background-image: none;
+  margin: 0 auto 0 0;
+}
+
+@media (max-width: 1199px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 131px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 125px;
+  }
+
+  .u-cookies-consent .u-text-1 {
+    margin-right: 0;
+  }
+
+  .u-cookies-consent .u-text-2 {
+    margin-right: 0;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 125px;
+  }
+
+  .u-cookies-consent .u-btn-1 {
+    padding: 14px 31px 14px 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 106px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-cookies-consent .u-container-layout-1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 225px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 154px;
+  }
+
+  .u-cookies-consent .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 65px;
+  }
+
+  .u-cookies-consent .u-container-layout-2 {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 121px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 15px;
+  }
+}</style></section>
   
 </body></html>
