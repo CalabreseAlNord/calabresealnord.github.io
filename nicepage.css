@@ -45632,7 +45632,7 @@ a.u-link.u-text-hover-color-var:hover {
         .u-table-alt-custom-color-1 tr:nth-child(even)
         {
             color: #ffffff;
-            background-color: #171516;
+            background-color: #000000;
 
         }
 
@@ -45642,7 +45642,7 @@ a.u-link.u-text-hover-color-var:hover {
         .u-button-style.u-custom-color-1[class*="u-border-"]
         {
             color: #ffffff !important;
-            background-color: #171516 !important;
+            background-color: #000000 !important;
         }
 
         .u-button-style.u-custom-color-1:hover,
@@ -45657,7 +45657,7 @@ a.u-link.u-text-hover-color-var:hover {
         li.active > .u-button-style.u-button-style.u-custom-color-1[class*="u-border-"]
         {
             color: #ffffff !important;
-            background-color: #151314 !important;
+            background-color: #000000 !important;
         }
 
         /* hover */
@@ -45675,7 +45675,7 @@ a.u-link.u-text-hover-color-var:hover {
         a.u-button-style.u-hover-custom-color-1[class*="u-border-"]:focus
         {
             color: #ffffff !important;
-            background-color: #171516 !important;
+            background-color: #000000 !important;
         }
 
         /* active */
@@ -45692,11 +45692,11 @@ a.u-link.u-text-hover-color-var:hover {
         input.u-field-input.u-field-input.u-active-custom-color-1:checked
         {
             color: #ffffff !important;
-            background-color: #171516 !important;
+            background-color: #000000 !important;
         }
 
         a.u-link.u-hover-custom-color-1:hover {
-            color: #171516 !important;
+            color: #000000 !important;
         }
 
         
@@ -46027,14 +46027,14 @@ a.u-link.u-text-hover-color-var:hover {
         .u-border-custom-color-1.u-field-input.u-field-input,
         .u-separator-custom-color-1:after
         {
-            border-color: #171516;
-            stroke: #171516;
+            border-color: #000000;
+            stroke: #000000;
         }
 
         .u-button-style.u-border-custom-color-1
         {
-            border-color: #171516 !important;
-            color: #171516 !important;
+            border-color: #000000 !important;
+            color: #000000 !important;
             background-color: transparent !important;
         }
 
@@ -46042,7 +46042,7 @@ a.u-link.u-text-hover-color-var:hover {
         .u-button-style.u-border-custom-color-1:focus
         {
             border-color: transparent !important;
-            color: #151314 !important;
+            color: #000000 !important;
             background-color: transparent !important;
         }
 
@@ -46052,8 +46052,8 @@ a.u-link.u-text-hover-color-var:hover {
         a.u-button-style:hover > .u-border-hover-custom-color-1,
         a.u-button-style.u-border-hover-custom-color-1:focus
         {
-            color: #171516 !important;
-            border-color: #171516 !important;
+            color: #000000 !important;
+            border-color: #000000 !important;
         }
 
 
@@ -46064,18 +46064,18 @@ a.u-link.u-text-hover-color-var:hover {
         li.active > a.u-button-style.u-button-style.u-border-active-custom-color-1,
         input.u-field-input.u-field-input.u-border-active-custom-color-1:checked
         {
-            color: #171516 !important;
-            border-color: #171516 !important;
+            color: #000000 !important;
+            border-color: #000000 !important;
         }
 
         .u-link.u-border-custom-color-1[class*="u-border-"]
         {
-            border-color: #171516 !important;
+            border-color: #000000 !important;
         }
 
         .u-link.u-border-custom-color-1[class*="u-border-"]:hover
         {
-            border-color: #151314 !important;
+            border-color: #000000 !important;
         }
         
         
@@ -46316,7 +46316,7 @@ a.u-link.u-text-hover-color-var:hover {
         a.u-button-style.u-text-custom-color-1,
         a.u-button-style.u-text-custom-color-1[class*="u-border-"]
         {
-            color: #171516 !important;
+            color: #000000 !important;
             
             
             
@@ -46331,7 +46331,7 @@ a.u-link.u-text-hover-color-var:hover {
         a.u-button-style.u-button-style.u-text-custom-color-1.active,
         a.u-button-style.u-button-style.u-text-custom-color-1[class*="u-border-"].active
         {
-            color: #151314 !important;
+            color: #000000 !important;
         }
 
         /* hover */
@@ -46353,7 +46353,7 @@ a.u-link.u-text-hover-color-var:hover {
         .u-popupmenu-items.u-text-hover-custom-color-1 .u-nav-link:hover,
         .u-calendar-time-list .u-calendar-time-slot.u-text-hover-custom-color-1:hover
         {
-            color: #171516 !important;
+            color: #000000 !important;
         }
 
         /* active */
@@ -46367,35 +46367,35 @@ a.u-link.u-text-hover-color-var:hover {
         .u-popupmenu-items.u-popupmenu-items.u-text-active-custom-color-1 .u-nav-link.active,
         .u-calendar-time-list .u-calendar-time-slot.u-text-active-custom-color-1.u-active
         {
-            color: #171516 !important;
+            color: #000000 !important;
         }
 
         .u-text-custom-color-1 .u-svg-link {
-            fill: #171516;
+            fill: #000000;
         }
 
         .u-text-hover-custom-color-1:hover .u-svg-link,
         .u-text-hover-custom-color-1:focus .u-svg-link,
         .u-button-style:hover > .u-text-hover-custom-color-1 .u-svg-link
         {
-            fill: #171516;
+            fill: #000000;
         }
 
         .u-text-active-custom-color-1:active .u-svg-link.u-svg-link,
         .u-button-style.u-button-style:active > .u-text-active-custom-color-1 .u-svg-link,
         .u-button-style.u-button-style.active > .u-text-active-custom-color-1 .u-svg-link
         {
-            fill: #171516;
+            fill: #000000;
         }
 
         .u-link.u-text-custom-color-1:hover
         {
-            color: #151314 !important;
+            color: #000000 !important;
         }
 
         a.u-link.u-text-hover-custom-color-1:hover
         {
-            color: #171516 !important;
+            color: #000000 !important;
         }
         
         
