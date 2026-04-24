@@ -285,9 +285,63 @@ PROCEDIMENTO PER METTERE NUOVI LOGHI
         </div>
       </div>
     </section>
+    <!-- INSTAGRAM FEED SECTION - inizio -->
+    <section class="u-clearfix u-valign-middle-lg u-valign-middle-sm u-section-5" id="sec-ig-feed">
+      <h2 class="u-align-center u-custom-font u-subtitle u-text u-text-ig-title">Instagram</h2>
+      <p class="u-align-center u-custom-font u-text u-text-ig-sub">
+        <a href="https://www.instagram.com/roradirector/" target="_blank" rel="noopener">@roradirector</a>
+      </p>
+      <div class="ig-feed-wrapper">
+        <!--
+          ISTRUZIONI PER ATTIVARE IL FEED DINAMICO:
+          1. Crea account gratuito su https://elfsight.com (o Behold.so / LightWidget).
+          2. Crea widget "Instagram Feed", source = @roradirector, layout = "Slider" (scroll infinito).
+          3. Configura: click immagine -> apre post IG in nuova tab.
+          4. Copia l'id del widget (es. elfsight-app-abc123...) e sostituiscilo nel div qui sotto.
+          NOTE: account IG personale dopo dic 2024 potrebbe richiedere conversione a Creator (gratis, 30s).
+        -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-c5f99342-024c-488a-8471-1c928c35ce55" data-elfsight-app-lazy></div>
+      </div>
+    </section>
+    <!-- INSTAGRAM FEED SECTION - fine -->
     <style class="u-overlap-style">.u-overlap:not(.u-sticky-scroll) .u-header {
 background-color: var(--color-var) !important; --color-var: #ffffff00 !important
 }</style>
+    <style>
+      .u-section-5 {
+        background-color: #ffffff;
+        padding: 60px 0 40px;
+        min-height: 300px;
+      }
+      .u-section-5 .u-text-ig-title {
+        margin: 0 auto 8px;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      .u-section-5 .u-text-ig-sub {
+        margin: 0 auto 30px;
+        text-align: center;
+        font-size: 1rem;
+      }
+      .u-section-5 .u-text-ig-sub a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+      }
+      .u-section-5 .ig-feed-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        min-height: 200px;
+      }
+      @media (max-width: 767px) {
+        .u-section-5 { padding: 40px 0 30px; }
+        .u-section-5 .u-text-ig-title { font-size: 1.5rem; }
+        .u-section-5 .u-text-ig-sub { font-size: 0.875rem; }
+      }
+    </style>
     
     
     
