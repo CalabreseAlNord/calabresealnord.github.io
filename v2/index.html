@@ -112,23 +112,13 @@
       background:linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.25) 50%, rgba(0,0,0,.65) 100%);
     }
     .hero-content { position:relative; z-index:2; }
-    .hero-eyebrow {
-      font-family:var(--sans); font-size:11px; letter-spacing:.32em; text-transform:uppercase;
-      color:rgba(255,255,255,.45); margin-bottom:28px;
-      opacity:0; animation:fadeUp 1s .4s forwards;
-    }
     .hero-name {
-      font-family:var(--serif); font-size:clamp(72px,15vw,190px);
+      font-family:var(--serif); font-size:clamp(40px,6vw,90px);
       font-weight:300; line-height:.87; letter-spacing:-.02em; color:var(--white);
     }
     .hero-name span { display:block; opacity:0; }
     .hero-name span:nth-child(1){ animation:clipUp 1s .65s cubic-bezier(.16,1,.3,1) forwards; }
     .hero-name span:nth-child(2){ animation:clipUp 1s .9s cubic-bezier(.16,1,.3,1) forwards; font-style:italic; }
-    .hero-desc {
-      margin-top:44px; font-family:var(--sans); font-size:11px;
-      letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.4);
-      opacity:0; animation:fadeUp 1s 1.2s forwards;
-    }
     .hero-scroll {
       position:absolute; bottom:32px; left:50%; transform:translateX(-50%); z-index:2;
       display:flex; flex-direction:column; align-items:center; gap:8px;
@@ -144,25 +134,18 @@
 
     /* ── SHARED ── */
     .section-label { font-family:var(--sans); font-size:10px; letter-spacing:.36em; text-transform:uppercase; margin-bottom:14px; display:block; }
-    .section-title { font-family:var(--serif); font-size:clamp(36px,5.5vw,68px); font-weight:300; line-height:1; letter-spacing:-.01em; }
+    .section-title { font-family:var(--serif); font-size:clamp(36px,5.5vw,68px); font-weight:300; line-height:1; letter-spacing:-.01em; transition:letter-spacing .5s cubic-bezier(.16,1,.3,1); cursor:default; }
+    .section-title:hover { letter-spacing:.02em; }
 
     /* ── CHI SONO ── */
     #about {
-      position:relative; min-height:100svh;
-      display:flex; align-items:center; justify-content:flex-end; overflow:hidden;
       background:var(--ink);
+      padding:100px 80px;
+      display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
     }
-    .about-bg {
-      position:absolute; inset:0;
-      background-image:url('media/aurora-profilo.jpg');
-      background-size:cover; background-position:center center;
-    }
-    .about-overlay {
-      position:absolute; inset:0;
-      background:linear-gradient(to right, rgba(0,0,0,.25) 0%, rgba(0,0,0,.7) 45%, rgba(0,0,0,.97) 100%);
-    }
-    .about-content { position:relative; z-index:2; max-width:540px; padding:100px 80px 100px 40px; }
-    .about-content .section-label { color:#444; }
+    .about-img-wrap { overflow:hidden; }
+    .about-img { width:100%; aspect-ratio:3/4; object-fit:cover; object-position:center top; display:block; }
+    .about-content { }
     .about-bio { font-family:var(--sans); font-size:15px; line-height:1.9; color:#888; margin-top:28px; text-wrap:pretty; }
     .about-cta-group { display:flex; gap:20px; flex-wrap:wrap; margin-top:36px; }
     .about-cta {
@@ -173,8 +156,7 @@
     .about-cta:hover { border-color:var(--white); }
     @media(max-width:768px){
       nav { padding:20px 22px; }
-      .about-content { padding:80px 28px; max-width:100%; }
-      .about-overlay { background:rgba(0,0,0,.82); }
+      #about { grid-template-columns:1fr; padding:60px 24px; gap:40px; }
     }
 
     /* ── SERVIZI ── */
@@ -192,15 +174,16 @@
 
     .service-card {
       background:#0e0e0e; padding:40px 32px;
-      transition:background .3s;
+      transition:background .3s, transform .4s cubic-bezier(.16,1,.3,1), border-top-color .3s;
+      border-top:1px solid transparent;
     }
-    .service-card:hover { background:#141414; }
+    .service-card:hover { background:#141414; transform:translateY(-6px); border-top-color:#2a2a2a; }
     .service-name {
       font-family:var(--sans); font-size:11px; font-weight:500;
       letter-spacing:.24em; text-transform:uppercase; color:var(--white);
       margin-bottom:20px;
     }
-    .service-desc { font-family:var(--sans); font-size:13px; line-height:1.8; color:#555; }
+    .service-desc { font-family:var(--sans); font-size:13px; line-height:1.8; color:#777; }
 
     /* ── VIDEO & REELS ── */
     #video-section { background:var(--paper); padding:120px 40px; color:var(--ink); }
@@ -273,7 +256,7 @@
     .gallery-header { max-width:1400px; margin:0 auto 56px; }
     .gallery-header .section-label { color:#aaa; }
     .gallery-header .section-title { color:var(--ink); }
-    .photo-grid { max-width:1400px; margin:0 auto; columns:3; column-gap:10px; }
+    .photo-grid { max-width:960px; margin:0 auto; columns:3; column-gap:10px; }
     @media(max-width:900px){ .photo-grid{ columns:2; } }
     @media(max-width:480px){ .photo-grid{ columns:1; } }
     .photo-item { break-inside:avoid; margin-bottom:10px; overflow:hidden; cursor:pointer; aspect-ratio:2/3; }
@@ -327,7 +310,7 @@
     /* ── CONTATTI ── */
     #contact { background:var(--ink); padding:100px 40px 48px; text-align:center; }
     .contact-title {
-      font-family:var(--serif); font-size:clamp(40px,8vw,100px);
+      font-family:var(--serif); font-size:clamp(22px,3.5vw,48px);
       font-weight:300; font-style:italic; line-height:.88;
       letter-spacing:-.01em; color:var(--white); margin-bottom:48px; text-wrap:balance;
     }
@@ -418,12 +401,10 @@
     src="../files/previewsito-2.mp4"></video>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Fotografa &amp; Content Creator &mdash; Reggio Emilia · Milano</div>
     <h1 class="hero-name">
       <span>Aurora</span>
       <span>Merenda</span>
     </h1>
-    <p class="hero-desc">Fotografia · Video · Content Creation</p>
   </div>
   <div class="hero-scroll">
     <span class="hero-scroll-txt">Scroll</span>
@@ -433,17 +414,17 @@
 
 <!-- ══ CHI SONO ══ -->
 <section id="about">
-  <div class="about-bg"></div>
-  <div class="about-overlay"></div>
+  <div class="about-img-wrap reveal-scale">
+    <img src="media/aurora-profilo.jpg" class="about-img" alt="Aurora Merenda"/>
+  </div>
   <div class="about-content">
-    <span class="section-label reveal">Chi sono</span>
-    <h2 class="section-title reveal" style="color:var(--white)">Art Director<br/><em>&amp; Fotografa</em></h2>
+    <h2 class="section-title reveal" style="color:var(--white)">Chi sono</h2>
     <p class="about-bio reveal">
       Mi chiamo Aurora, ho 20 anni e sono fortemente motivata a costruire una carriera nella direzione creativa, con l'obiettivo di crescere professionalmente come Art Director.
       <br/><br/>
       Il mio percorso inizia a 16 anni, quando nasce il mio interesse per la fotografia e l'arte audiovisiva. Settori nei quali ho sviluppato nel tempo competenze e sensibilità per la composizione visiva e la narrazione per immagini.
       <br/><br/>
-      Nello sviluppo di ogni progetto, mi impegno a perseguire non solo l'estetica. In ogni progetto ricerco un equilibrio tra estetica e autenticità, mi impegno a perseguire il lato umano delle persone coinvolte.
+      In ogni progetto ricerco un equilibrio tra estetica e autenticità, impegnandomi a valorizzare il lato umano delle persone coinvolte.
       <br/><br/>
       Mantenendo un approccio aperto all'ascolto, sia degli altri che di me stessa.
     </p>
@@ -480,7 +461,7 @@
 <section id="video-section">
   <div class="video-section-header">
     <span class="section-label reveal">Portfolio</span>
-    <h2 class="section-title reveal">Videos</h2>
+    <h2 class="section-title reveal">Video</h2>
   </div>
 
   <!-- Reels verticali -->
@@ -571,9 +552,9 @@
 <!-- ══ INSTAGRAM ══ -->
 <section id="instagram">
   <div class="ig-header reveal">
-    <span class="section-label" style="color:#aaa">Live Feed</span>
+    <span class="section-label" style="color:#aaa">Social</span>
     <h2 class="section-title" style="color:var(--ink)">Instagram</h2>
-    <p class="ig-handle">@auroraamerenda</p>
+    <p class="ig-handle">@roradirector</p>
   </div>
   <div class="reveal" style="transition-delay:.18s">
     <div class="elfsight-app-c5f99342-024c-488a-8471-1c928c35ce55" data-elfsight-app-lazy></div>
@@ -618,14 +599,13 @@
     <span class="contact-sep">·</span>
     <a href="tel:+393663287202" class="contact-link">(+39) 366 328 7202</a>
     <span class="contact-sep">·</span>
-    <a href="https://instagram.com/auroraamerenda" target="_blank" class="contact-link">Instagram</a>
+    <a href="https://instagram.com/roradirector" target="_blank" class="contact-link">Instagram</a>
   </div>
   <p class="contact-location reveal" style="transition-delay:.32s">Reggio Emilia · Milano · Trasferte</p>
 </section>
 
 <section id="services">
   <div class="services-header">
-    <span class="section-label reveal">Cosa faccio</span>
     <h2 class="section-title reveal">Servizi</h2>
   </div>
   <div class="services-grid">
@@ -660,7 +640,7 @@
   <span class="footer-copy">© 2026 Aurora Merenda</span>
   <div class="footer-links">
     <a href="files/artistic-curriculum.pdf" target="_blank">CV</a>
-    <a href="https://instagram.com/auroraamerenda" target="_blank">Instagram</a>
+    <a href="https://instagram.com/roradirector" target="_blank">Instagram</a>
     <a href="mailto:merendaurora@gmail.com">Email</a>
   </div>
 </footer>
