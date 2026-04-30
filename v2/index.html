@@ -113,7 +113,7 @@
     }
     .hero-content { position:relative; z-index:2; }
     .hero-name {
-      font-family:var(--serif); font-size:clamp(40px,6vw,90px);
+      font-family:var(--serif); font-size:clamp(80px,12vw,180px);
       font-weight:300; line-height:.87; letter-spacing:-.02em; color:var(--white);
     }
     .hero-name span { display:block; opacity:0; }
@@ -140,23 +140,37 @@
     /* ── CHI SONO ── */
     #about {
       background:var(--ink);
-      padding:100px 80px;
-      display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
+      padding:120px 40px;
+      position:relative;
+      min-height:80vh;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
     }
-    .about-img-wrap { overflow:hidden; }
-    .about-img { width:100%; aspect-ratio:3/4; object-fit:cover; object-position:center top; display:block; }
-    .about-content { }
-    .about-bio { font-family:var(--sans); font-size:15px; line-height:1.9; color:#888; margin-top:28px; text-wrap:pretty; }
+    .about-bg {
+      position:absolute; inset:0; width:100%; height:100%;
+      object-fit:cover; object-position:75% 35%;
+    }
+    #about::before {
+      content:'';
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,.55);
+      z-index:1;
+    }
+    .about-content { position:relative; z-index:2; max-width:1400px; margin:0 auto; width:100%; }
+    .about-content > * { max-width:560px; }
+    .about-bio { font-family:var(--sans); font-size:15px; line-height:1.9; color:#ccc; margin-top:28px; text-wrap:pretty; }
     .about-cta-group { display:flex; gap:20px; flex-wrap:wrap; margin-top:36px; }
     .about-cta {
       display:inline-block; font-family:var(--sans); font-size:11px;
       letter-spacing:.22em; text-transform:uppercase; color:var(--white); text-decoration:none;
-      border-bottom:1px solid #333; padding-bottom:4px; transition:border-color .2s;
+      border-bottom:1px solid #666; padding-bottom:4px; transition:border-color .2s;
     }
     .about-cta:hover { border-color:var(--white); }
     @media(max-width:768px){
       nav { padding:20px 22px; }
-      #about { grid-template-columns:1fr; padding:60px 24px; gap:40px; }
+      #about { padding:80px 24px; min-height:60vh; }
     }
 
     /* ── SERVIZI ── */
@@ -256,7 +270,7 @@
     .gallery-header { max-width:1400px; margin:0 auto 56px; }
     .gallery-header .section-label { color:#aaa; }
     .gallery-header .section-title { color:var(--ink); }
-    .photo-grid { max-width:960px; margin:0 auto; columns:3; column-gap:10px; }
+    .photo-grid { max-width:1400px; margin:0 auto; columns:3; column-gap:10px; }
     @media(max-width:900px){ .photo-grid{ columns:2; } }
     @media(max-width:480px){ .photo-grid{ columns:1; } }
     .photo-item { break-inside:avoid; margin-bottom:10px; overflow:hidden; cursor:pointer; aspect-ratio:2/3; }
@@ -315,10 +329,10 @@
       letter-spacing:-.01em; color:var(--white); margin-bottom:48px; text-wrap:balance;
     }
     .contact-links { display:flex; flex-wrap:wrap; gap:28px; justify-content:center; align-items:center; }
-    .contact-link { font-family:var(--sans); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#444; text-decoration:none; transition:color .2s; }
+    .contact-link { font-family:var(--sans); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#999; text-decoration:none; transition:color .2s; }
     .contact-link:hover { color:var(--white); }
-    .contact-sep { color:#1c1c1c; }
-    .contact-location { margin-top:36px; font-family:var(--sans); font-size:11px; letter-spacing:.18em; color:#2e2e2e; text-transform:uppercase; }
+    .contact-sep { color:#555; }
+    .contact-location { margin-top:36px; font-family:var(--sans); font-size:11px; letter-spacing:.18em; color:#777; text-transform:uppercase; }
 
     footer {
       background:var(--ink); border-top:1px solid #141414; padding:22px 48px;
@@ -414,9 +428,7 @@
 
 <!-- ══ CHI SONO ══ -->
 <section id="about">
-  <div class="about-img-wrap reveal-scale">
-    <img src="media/aurora-profilo.jpg" class="about-img" alt="Aurora Merenda"/>
-  </div>
+  <img src="media/aurora-profilo.jpg" class="about-bg" alt=""/>
   <div class="about-content">
     <h2 class="section-title reveal" style="color:var(--white)">Chi sono</h2>
     <p class="about-bio reveal">
@@ -467,41 +479,41 @@
   <!-- Reels verticali -->
   <div class="reels-label reveal"><span>Reels</span></div>
   <div class="reels-scroll reveal" style="transition-delay:.1s">
-    <div class="reel-item" data-src="media/reels/concerto Alfa (1).MOV" data-title="Concerto Alfa">
-      <video class="reel-preview" src="media/reels/concerto Alfa (1).MOV" muted playsinline preload="metadata"></video>
+    <div class="reel-item" data-src="media/reels/concerto Alfa (1).MOV" data-title="Alfa">
+      <video class="reel-preview" src="media/reels/concerto Alfa (1).MOV" poster="media/reels/copertine/copertina Alfa.png" muted playsinline preload="metadata"></video>
       <div class="reel-dim"></div>
       <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
-      <span class="reel-lbl">Concerto Alfa</span>
+      <span class="reel-lbl">Alfa</span>
     </div>
     <div class="reel-item" data-src="media/reels/videoclip - Vita Cinema (2).MOV" data-title="Vita Cinema">
-      <video class="reel-preview" src="media/reels/videoclip - Vita Cinema (2).MOV" muted playsinline preload="metadata"></video>
+      <video class="reel-preview" src="media/reels/videoclip - Vita Cinema (2).MOV" poster="media/reels/copertine/copertina Vita Cinema.png" muted playsinline preload="metadata"></video>
       <div class="reel-dim"></div>
       <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
       <span class="reel-lbl">Vita Cinema</span>
     </div>
-    <div class="reel-item" data-src="media/reels/conferenza stampa Juli (3).MOV" data-title="Conferenza Stampa Juli">
-      <video class="reel-preview" src="media/reels/conferenza stampa Juli (3).MOV" muted playsinline preload="metadata"></video>
-      <div class="reel-dim"></div>
-      <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
-      <span class="reel-lbl">Conferenza Juli</span>
-    </div>
-    <div class="reel-item" data-src="media/reels/concerto Frah Quintale (4).MP4" data-title="Concerto Frah Quintale">
-      <video class="reel-preview" src="media/reels/concerto Frah Quintale (4).MP4" muted playsinline preload="metadata"></video>
+    <div class="reel-item" data-src="media/reels/concerto Frah Quintale (4).MP4" data-title="Frah Quintale">
+      <video class="reel-preview" src="media/reels/concerto Frah Quintale (4).MP4" poster="media/reels/copertine/copertina Frah Quintale.png" muted playsinline preload="metadata"></video>
       <div class="reel-dim"></div>
       <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
       <span class="reel-lbl">Frah Quintale</span>
     </div>
+    <div class="reel-item" data-src="media/reels/conferenza stampa Juli (3).MOV" data-title="Juli">
+      <video class="reel-preview" src="media/reels/conferenza stampa Juli (3).MOV" poster="media/reels/copertine/copertina Juli.png" muted playsinline preload="metadata"></video>
+      <div class="reel-dim"></div>
+      <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+      <span class="reel-lbl">Juli</span>
+    </div>
     <div class="reel-item" data-src="media/reels/videoclip - Giorni (5).mp4" data-title="Giorni">
-      <video class="reel-preview" src="media/reels/videoclip - Giorni (5).mp4" muted playsinline preload="metadata"></video>
+      <video class="reel-preview" src="media/reels/videoclip - Giorni (5).mp4" poster="media/reels/copertine/copertina Giorni.png" muted playsinline preload="metadata"></video>
       <div class="reel-dim"></div>
       <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
       <span class="reel-lbl">Giorni</span>
     </div>
-    <div class="reel-item" data-src="media/reels/concerto Ernia (6).mov" data-title="Concerto Ernia">
-      <video class="reel-preview" src="media/reels/concerto Ernia (6).mov" muted playsinline preload="metadata"></video>
+    <div class="reel-item" data-src="media/reels/concerto Ernia (6).mov" data-title="Ernia">
+      <video class="reel-preview" src="media/reels/concerto Ernia (6).mov" poster="media/reels/copertine/copertina Ernia.png" muted playsinline preload="metadata"></video>
       <div class="reel-dim"></div>
       <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
-      <span class="reel-lbl">Concerto Ernia</span>
+      <span class="reel-lbl">Ernia</span>
     </div>
   </div>
 
@@ -777,7 +789,7 @@
 
   // REEL THUMBNAILS — seek to first frame on metadata load
   document.querySelectorAll('.reel-preview').forEach(v => {
-    v.addEventListener('loadedmetadata', () => { v.currentTime = 0.1; });
+    if (!v.poster) v.addEventListener('loadedmetadata', () => { v.currentTime = 0.1; });
   });
   document.getElementById('video-popup-close').addEventListener('click', closePopup);
   popupBg.addEventListener('click', e => { if (e.target === popupBg) closePopup(); });
