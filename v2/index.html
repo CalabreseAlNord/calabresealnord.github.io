@@ -113,14 +113,14 @@
     }
     .hero-content { position:relative; z-index:2; }
     .hero-name {
-      font-family:var(--serif); font-size:clamp(80px,12vw,180px);
+      font-family:var(--serif); font-size:clamp(70px,10vw,150px);
       font-weight:300; line-height:.87; letter-spacing:-.02em; color:var(--white);
     }
     .hero-name span { display:block; opacity:0; }
     .hero-name span:nth-child(1){ animation:clipUp 1s .65s cubic-bezier(.16,1,.3,1) forwards; }
     .hero-name span:nth-child(2){ animation:clipUp 1s .9s cubic-bezier(.16,1,.3,1) forwards; font-style:italic; }
     .hero-scroll {
-      position:absolute; bottom:32px; left:50%; transform:translateX(-50%); z-index:2;
+      position:absolute; bottom:32px; left:0; right:0; margin:0 auto; width:fit-content; z-index:2;
       display:flex; flex-direction:column; align-items:center; gap:8px;
       opacity:0; animation:fadeUp 1s 1.55s forwards;
     }
@@ -324,7 +324,7 @@
     /* ── CONTATTI ── */
     #contact { background:var(--ink); padding:100px 40px 48px; text-align:center; }
     .contact-title {
-      font-family:var(--serif); font-size:clamp(22px,3.5vw,48px);
+      font-family:var(--serif); font-size:clamp(42px,3.5vw,48px);
       font-weight:300; font-style:italic; line-height:.88;
       letter-spacing:-.01em; color:var(--white); margin-bottom:48px; text-wrap:balance;
     }
@@ -479,38 +479,38 @@
   <!-- Reels verticali -->
   <div class="reels-label reveal"><span>Reels</span></div>
   <div class="reels-scroll reveal" style="transition-delay:.1s">
-    <div class="reel-item" data-src="media/reels/concerto Alfa (1).MOV" data-title="Alfa">
-      <video class="reel-preview" src="media/reels/concerto Alfa (1).MOV" poster="media/reels/copertine/copertina Alfa.png" muted playsinline preload="metadata"></video>
+    <div class="reel-item" data-src="https://youtube.com/shorts/IhaH6q6mq5k" data-title="Alfa">
+      <img class="reel-preview" src="media/reels/copertine/copertina Alfa.png" alt="Alfa"/>
       <div class="reel-dim"></div>
       <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
       <span class="reel-lbl">Alfa</span>
     </div>
-    <div class="reel-item" data-src="media/reels/videoclip - Vita Cinema (2).MOV" data-title="Vita Cinema">
-      <video class="reel-preview" src="media/reels/videoclip - Vita Cinema (2).MOV" poster="media/reels/copertine/copertina Vita Cinema.png" muted playsinline preload="metadata"></video>
+    <div class="reel-item" data-src="https://youtube.com/shorts/jw16tSAme_8" data-title="Vita Cinema">
+      <img class="reel-preview" src="media/reels/copertine/copertina Vita Cinema.png" alt="Vita Cinema"/>
       <div class="reel-dim"></div>
       <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
       <span class="reel-lbl">Vita Cinema</span>
     </div>
-    <div class="reel-item" data-src="media/reels/concerto Frah Quintale (4).MP4" data-title="Frah Quintale">
-      <video class="reel-preview" src="media/reels/concerto Frah Quintale (4).MP4" poster="media/reels/copertine/copertina Frah Quintale.png" muted playsinline preload="metadata"></video>
+    <div class="reel-item" data-src="https://youtube.com/shorts/diWv0JEB76s" data-title="Frah Quintale">
+      <img class="reel-preview" src="media/reels/copertine/copertina Frah Quintale.png" alt="Frah Quintale"/>
       <div class="reel-dim"></div>
       <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
       <span class="reel-lbl">Frah Quintale</span>
     </div>
-    <div class="reel-item" data-src="media/reels/conferenza stampa Juli (3).MOV" data-title="Juli">
-      <video class="reel-preview" src="media/reels/conferenza stampa Juli (3).MOV" poster="media/reels/copertine/copertina Juli.png" muted playsinline preload="metadata"></video>
+    <div class="reel-item" data-src="https://youtube.com/shorts/tYfptpAuWNE" data-title="Juli">
+      <img class="reel-preview" src="media/reels/copertine/copertina Juli.png" alt="Juli"/>
       <div class="reel-dim"></div>
       <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
       <span class="reel-lbl">Juli</span>
     </div>
-    <div class="reel-item" data-src="media/reels/videoclip - Giorni (5).mp4" data-title="Giorni">
-      <video class="reel-preview" src="media/reels/videoclip - Giorni (5).mp4" poster="media/reels/copertine/copertina Giorni.png" muted playsinline preload="metadata"></video>
+    <div class="reel-item" data-src="https://youtube.com/shorts/84yvtE0Oy00" data-title="Giorni">
+      <img class="reel-preview" src="media/reels/copertine/copertina Giorni.png" alt="Giorni"/>
       <div class="reel-dim"></div>
       <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
       <span class="reel-lbl">Giorni</span>
     </div>
-    <div class="reel-item" data-src="media/reels/concerto Ernia (6).mov" data-title="Ernia">
-      <video class="reel-preview" src="media/reels/concerto Ernia (6).mov" poster="media/reels/copertine/copertina Ernia.png" muted playsinline preload="metadata"></video>
+    <div class="reel-item" data-src="https://youtube.com/shorts/8a2FtN7yRfM" data-title="Ernia">
+      <img class="reel-preview" src="media/reels/copertine/copertina Ernia.png" alt="Ernia"/>
       <div class="reel-dim"></div>
       <div class="reel-play"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
       <span class="reel-lbl">Ernia</span>
@@ -754,9 +754,15 @@
     const src = item.dataset.src || '';
     popupTitle.textContent = item.dataset.title || '';
     popupDesc.textContent = '';
-    popupPlayer.innerHTML = src
-      ? `<video src="${src}" controls autoplay style="width:100%;height:100%;background:#000"></video>`
-      : '';
+    let html = '';
+    if (src.includes('youtube.com') || src.includes('youtu.be')) {
+      const id = (src.match(/shorts\/([^?&/]+)/) ||
+                  src.match(/(?:v=|youtu\.be\/)([^&?/]+)/) || [])[1];
+      html = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1" allow="autoplay;fullscreen" allowfullscreen></iframe>`;
+    } else if (src) {
+      html = `<video src="${src}" controls autoplay style="width:100%;height:100%;background:#000"></video>`;
+    }
+    popupPlayer.innerHTML = html;
     popupBg.classList.add('open', 'reel-mode');
     document.body.style.overflow = 'hidden';
   }
@@ -787,10 +793,6 @@
   });
   lightboxBg.addEventListener('click', e => { if (e.target === lightboxBg) { lightboxBg.classList.remove('open'); document.body.style.overflow = ''; } });
 
-  // REEL THUMBNAILS — seek to first frame on metadata load
-  document.querySelectorAll('.reel-preview').forEach(v => {
-    if (!v.poster) v.addEventListener('loadedmetadata', () => { v.currentTime = 0.1; });
-  });
   document.getElementById('video-popup-close').addEventListener('click', closePopup);
   popupBg.addEventListener('click', e => { if (e.target === popupBg) closePopup(); });
   document.addEventListener('keydown', e => {
