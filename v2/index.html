@@ -160,7 +160,7 @@
     }
     .about-content { position:relative; z-index:2; max-width:1400px; margin:0 auto; width:100%; }
     .about-content > * { max-width:560px; }
-    .about-bio { font-family:var(--sans); font-size:15px; line-height:1.9; color:#ccc; margin-top:28px; text-wrap:pretty; }
+    .about-bio { font-family:var(--sans); font-size:17px; line-height:1.9; color:#ccc; margin-top:28px; text-align:justify; }
     .about-cta-group { display:flex; gap:20px; flex-wrap:wrap; margin-top:36px; }
     .about-cta {
       display:inline-block; font-family:var(--sans); font-size:11px;
@@ -197,7 +197,7 @@
       letter-spacing:.24em; text-transform:uppercase; color:var(--white);
       margin-bottom:20px;
     }
-    .service-desc { font-family:var(--sans); font-size:13px; line-height:1.8; color:#777; }
+    .service-desc { font-family:var(--sans); font-size:15px; line-height:1.8; color:#777; text-align:justify; }
 
     /* ── VIDEO & REELS ── */
     #video-section { background:var(--paper); padding:120px 40px; color:var(--ink); }
@@ -270,10 +270,10 @@
     .gallery-header { max-width:1400px; margin:0 auto 56px; }
     .gallery-header .section-label { color:#aaa; }
     .gallery-header .section-title { color:var(--ink); }
-    .photo-grid { max-width:1400px; margin:0 auto; columns:3; column-gap:10px; }
-    @media(max-width:900px){ .photo-grid{ columns:2; } }
-    @media(max-width:480px){ .photo-grid{ columns:1; } }
-    .photo-item { break-inside:avoid; margin-bottom:10px; overflow:hidden; cursor:pointer; aspect-ratio:2/3; }
+    .photo-grid { max-width:1400px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+    @media(max-width:900px){ .photo-grid{ grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:480px){ .photo-grid{ grid-template-columns:1fr; } }
+    .photo-item { overflow:hidden; cursor:pointer; aspect-ratio:2/3; }
     .photo-item img { width:100%; height:100%; display:block; object-fit:cover; object-position:center center; transition:transform .6s cubic-bezier(.16,1,.3,1); }
     .photo-item:hover img { transform:scale(1.04); }
 
@@ -329,10 +329,10 @@
       letter-spacing:-.01em; color:var(--white); margin-bottom:48px; text-wrap:balance;
     }
     .contact-links { display:flex; flex-wrap:wrap; gap:28px; justify-content:center; align-items:center; }
-    .contact-link { font-family:var(--sans); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#999; text-decoration:none; transition:color .2s; }
+    .contact-link { font-family:var(--sans); font-size:14px; letter-spacing:.22em; text-transform:uppercase; color:#999; text-decoration:none; transition:color .2s; }
     .contact-link:hover { color:var(--white); }
     .contact-sep { color:#555; }
-    .contact-location { margin-top:36px; font-family:var(--sans); font-size:11px; letter-spacing:.18em; color:#777; text-transform:uppercase; }
+    .contact-location { margin-top:36px; font-family:var(--sans); font-size:13px; letter-spacing:.18em; color:#777; text-transform:uppercase; }
 
     footer {
       background:var(--ink); border-top:1px solid #141414; padding:22px 48px;
@@ -524,7 +524,7 @@
   <div class="video-h-grid">
     <div class="video-card reveal-scale"
       data-title="Giorni – Mullah"
-      data-desc="Videoclip musicale."
+      data-desc="Videoclip musicale"
       data-src="https://youtu.be/Res8fQ_agt8">
       <img src="media/video/copertina videoclip - Giorni (1).JPG" alt="Giorni – Mullah"/>
       <div class="video-card-overlay"><div class="play-circle"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
@@ -533,7 +533,7 @@
     </div>
     <div class="video-card reveal-scale" style="transition-delay:.08s"
       data-title="Vita Cinema – Swat"
-      data-desc="Videoclip musicale."
+      data-desc="Videoclip musicale"
       data-src="https://youtu.be/9PmAgCfUwYY">
       <img src="media/video/copertina videoclip - Vita Cinema (2).jpg" alt="Vita Cinema – Swat"/>
       <div class="video-card-overlay"><div class="play-circle"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
