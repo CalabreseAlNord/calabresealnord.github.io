@@ -469,16 +469,19 @@
   <div class="photo-grid">
     <div class="photo-item reveal-scale"><img src="media/images/foto-01.jpg" alt="Foto 1" loading="lazy"/></div>
     <div class="photo-item reveal-scale" style="transition-delay:.04s"><img src="media/images/foto-02.jpg" alt="Foto 2" loading="lazy"/></div>
-    <div class="photo-item reveal-scale" style="transition-delay:.08s"><img src="media/images/foto-03.jpg" alt="Foto 3" loading="lazy"/></div>
+    <div class="photo-item reveal-scale" style="transition-delay:.08s"><img src="media/images/foto-06.jpg" alt="Foto 3" loading="lazy"/></div>
     <div class="photo-item reveal-scale" style="transition-delay:.12s"><img src="media/images/foto-04.jpg" alt="Foto 4" loading="lazy"/></div>
-    <div class="photo-item reveal-scale" style="transition-delay:.16s"><img src="media/images/foto-05.jpg" alt="Foto 5" loading="lazy"/></div>
-    <div class="photo-item reveal-scale" style="transition-delay:.20s"><img src="media/images/foto-06.jpg" alt="Foto 6" loading="lazy"/></div>
+    <div class="photo-item reveal-scale" style="transition-delay:.16s"><img src="media/images/foto-03.png" alt="Foto 5" loading="lazy"/></div>
+    <div class="photo-item reveal-scale" style="transition-delay:.20s"><img src="media/images/foto-05.jpg" alt="Foto 6" loading="lazy"/></div>
     <div class="photo-item reveal-scale" style="transition-delay:.24s"><img src="media/images/foto-07.jpg" alt="Foto 7" loading="lazy"/></div>
     <div class="photo-item reveal-scale" style="transition-delay:.28s"><img src="media/images/foto-08.jpg" alt="Foto 8" loading="lazy"/></div>
     <div class="photo-item reveal-scale" style="transition-delay:.32s"><img src="media/images/foto-09.jpg" alt="Foto 9" loading="lazy"/></div>
     <div class="photo-item reveal-scale" style="transition-delay:.36s"><img src="media/images/foto-10.jpg" alt="Foto 10" loading="lazy"/></div>
     <div class="photo-item reveal-scale" style="transition-delay:.40s"><img src="media/images/foto-11.jpg" alt="Foto 11" loading="lazy"/></div>
-    <div class="photo-item reveal-scale" style="transition-delay:.44s"><img src="media/images/foto-13.jpg" alt="Foto 12" loading="lazy"/></div>
+    <div class="photo-item reveal-scale" style="transition-delay:.44s"><img src="media/images/foto-12.jpg" alt="Foto 12" loading="lazy"/></div>
+    <div class="photo-item reveal-scale" style="transition-delay:.48s"><img src="media/images/foto-13.jpg" alt="Foto 13" loading="lazy"/></div>
+    <div class="photo-item reveal-scale" style="transition-delay:.52s"><img src="media/images/foto-14.jpg" alt="Foto 14" loading="lazy"/></div>
+    <div class="photo-item reveal-scale" style="transition-delay:.56s"><img src="media/images/foto-16.jpg" alt="Foto 15" loading="lazy"/></div>
   </div>
 </section>
 
@@ -858,6 +861,23 @@
     if (e.data?.type === '__activate_edit_mode') document.getElementById('tweaks-panel').classList.add('show');
     if (e.data?.type === '__deactivate_edit_mode') document.getElementById('tweaks-panel').classList.remove('show');
   });
+
+  (function () {
+    var heroVideo = document.querySelector('.hero-video');
+    var BREAKPOINT = 769;
+    var MOBILE_SRC = 'media/hero/intro.mp4';
+    var DESKTOP_SRC = 'media/hero/intro-orizzontale.mp4';
+    function updateHeroSrc() {
+      var target = window.innerWidth < BREAKPOINT ? MOBILE_SRC : DESKTOP_SRC;
+      if (heroVideo.getAttribute('src') !== target) {
+        heroVideo.setAttribute('src', target);
+        heroVideo.load();
+        heroVideo.play().catch(function(){});
+      }
+    }
+    updateHeroSrc();
+    window.addEventListener('resize', updateHeroSrc);
+  })();
 </script>
 </body>
 </html>
