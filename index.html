@@ -847,6 +847,7 @@
 </div>
 
 <script>
+  if (location.pathname === '/index.html') location.replace('/');
   // NAV: appare solo dopo lo hero
   const mainNav = document.getElementById('main-nav');
   const heroEl = document.getElementById('hero');
