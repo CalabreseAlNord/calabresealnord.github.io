@@ -34,6 +34,12 @@ Deploy automatico su GitHub Pages → dominio `merendaurora.com`.
 - **Elfsight widget**: `elfsight-app-c5f99342-024c-488a-8471-1c928c35ce55` — feed Instagram live, lasciare invariato.
 - **SEO**: canonical, sitemap, JSON-LD Person schema già presenti — non rimuovere.
 
+## Skills obbligatorie
+
+**Per qualsiasi task SEO** (meta tag, canonical, structured data, sitemap, GSC, ranking, crawlability, on-page): invocare SEMPRE la skill `sickn33-antigravity-awesome-skills-seo-audit` prima di apportare modifiche. La skill identifica i problemi e prioritizza le azioni — non agire senza averla eseguita.
+
+**Per qualsiasi task di performance** (ottimizzazione immagini, lazy loading, Core Web Vitals, tempi di caricamento, Lighthouse score): invocare SEMPRE la skill `dicklesworthstone-performance-lighthouse-runner` prima di apportare modifiche.
+
 ## Sezioni di index.html
 
 | Sezione | ID | Note |
