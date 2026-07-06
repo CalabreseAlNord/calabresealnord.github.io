@@ -93,6 +93,23 @@ Presente in `<head>` prima di `</head>`. Include:
 - `sameAs`: Instagram + YouTube
 - Non rimuovere o modificare senza motivo SEO esplicito.
 
+## JSON-LD MusicEvent schema (SEO/GEO)
+
+Blocco `@graph` in `<head>`, un oggetto `MusicEvent` per ogni concerto fotografato. Campi da includere sempre:
+- `@type: "MusicEvent"`, `name`, `startDate` (YYYY-MM-DD)
+- `endDate`: stesso valore di `startDate` (evento di un giorno, non abbiamo orari reali)
+- `eventStatus`: sempre `"https://schema.org/EventScheduled"`
+- `location`: `Place` con `PostalAddress` (`addressLocality`, `addressRegion` se noto, `addressCountry`)
+- `performer`: `MusicGroup` con `name` dell'artista
+- `organizer`: fisso, non è il vero promoter del concerto (dato che non abbiamo) ma l'entità che pubblica il contenuto:
+  ```json
+  {"@type": "Organization", "name": "Aurora Merenda", "url": "https://merendaurora.com", "sameAs": "https://www.instagram.com/roradirector"}
+  ```
+- `image`: copertina reel dedicata in `media/reels/copertine/`; se non esiste, fallback su `media/aurora-profilo.jpg`
+- `description`: `"Fotografia live di Aurora Merenda (@roradirector)"`
+
+**Non aggiungere `offers`** (prezzo/valuta/URL biglietti/availability) a meno di avere dati reali e verificati — inventarli produce structured data fuorviante e rischia penalità Google. Il campo resta "facoltativo mancante" in GSC, non blocca l'indicizzazione.
+
 ## Pattern JS ricorrenti
 
 - **Popup video/reel**: `openPopup(card)` / `openReelPopup(item)` — leggono `data-src` e `data-title`
